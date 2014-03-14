@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<title>reanimate-1.0.js by guest271314</title>
+<script type='text/javascript' src='jquery-1.10.2.min.js'></script>
+<style> 
+@charset = "UTF-8";
+body {
+  font-family: sans, monospace, courier, arial;
+}
+
+div {
+  font-size:12px;
+  text-align:center;
+  color:#000;
+  text-shadow:1px 1px 1px green;
+  width:100px;
+  height:100px;
+  background:red;
+  position:relative;
+  display : block;
+  border : 1px solid #555753;
+  box-shadow:0.0em 0.0em 0.0em transparent;
+  border-radius : 0%;
+  -moz-border-radius : 0%,
+  -webkit-border-radius : 0%;
+  animation:move 15000ms linear 0ms infinite both alternate;
+  animation-play-state:paused;
+  -webkit-animation:move 15000ms linear 0ms infinite both alternate;
+  -webkit-animation-play-state:paused;
+  z-Index : 10;
+}
+
+@keyframes move {
+  0% {left:0%;}
+  50% {transform: translateZ(0) scale(2.75,2.75) rotateZ(180deg) rotateY(45deg) rotateX(45deg)}
+  100% {left:90%;}
+}
+
+@-webkit-keyframes move {
+  0% {left:0%;}
+  50% {-webkit-transform: translateZ(0) scale(2.75,2.75) rotateZ(180deg) rotateY(45deg) rotateX(45deg)}
+  100% {left:90%;}
+}
+
+p span {
+  font-size : 16px;
+}
+
+span > abbr {
+  font-size : 24px;
+  font-weight : 200;
+  display : inline-block;
+  transform : scale(1.0,1.5);
+}
+
+data {
+  font-size : 14px;
+  font-weight : 500;
+  text-align: center;
+  color : #000aaa;
+  width : 500px;
+  max-height : 32px;
+  display : inline-block;
+  position : relative;
+  top : -20px;
+  outline : 0.1em dotted grey;
+  line-height : 38px;
+  opacity : 0.75;
+  z-Index:1;
+}
+
+
+
+</style>
+<!--
+/*! 
+ * reanimate.js Copyright © 2014 guest271314 http://guest271314.com
+ * License: BSD http://www.opensource.org/licenses/BSD-2-Clause
+ * Reference : https://stackoverflow.com/questions/22080548/pausing-css-animation-with-javascript-and-also-jumping-to-a-specific-place-in-th (e animation) [sic].
+ * Depends: jQuery http://jquery.com
+ * Created : 2014-02-27
+ * Updated: 2014-03-02
+ * Version: 1.0
+ * Usage: `← : left-arrow : js animations` `↑ up-arrow : pause all animations` 
+ * Usage, cont.: `→ right-arow : play css animations`
+ *******************************************************************************
+Copyright © 2014, guest271314
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice, this
+  list of conditions and the following disclaimer in the documentation and/or
+  other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*******************************************************************************/
+--> 
+<script type="text/javascript" src="reanimate-1.0.js">
+</script>
+</head>
+<body>
+<p><span><abbr>&larr; </abbr>play js animation <abbr>&uarr;</abbr>pause all animations <abbr>&rarr; </abbr>play css animation</span></p><br />
+<data> </data><br />
+<button>Play</button>
+<button>Pause</button>
+<br /><br />
+<div id="animated" data-="reanimate.js by guest271314"></div>
+</body>
+</html>
