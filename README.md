@@ -20,3 +20,5 @@ reanimate.js
   
   Usage, cont.: `→ right-arow : play css animations`
   
+  Working example : http://guest271314.github.io/reanimate/
+  
